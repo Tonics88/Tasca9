@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tasca 1 - Calcular les quotes d'una hipoteca</title>
+    <!-- Llibreries de bootstrap afegides directament d'internet-->
+	<link rel="stylesheet" <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="js/calcularQuota.js"></script>
+</head>
+<body>
+	
+	<!-- Formulari -->
+	<div class="container">
+		<h3>Calcular les quotes d'una hipoteca</h3>
+		<form action="#">
+			<div class="form-group">
+				<label for="inici"></label>Data d'inici:</label>
+				<input type="month" class="form-control" id="inici" name="inici" min="2018-02" value="2018-02">
+			</div>
+			<div class="form-group">
+				<label for="capita">Capital. No pot ser superior a 1 milió d'euros.</label>
+				<input type="number" class="form-control" id="capita" placeholder="Quantitat desitjada" name="capital">
+			</div>
+			<div class="form-group">
+					<label for="interessos">Interessos. Pot ser un nombre real.</label>
+					<input type="number" class="form-control" id="interes" placeholder="Interessos" name="interes" step=".01">
+			</div>
+			<div class="form-group">
+					<label for="termini">Termini en mesos. No pot ser superior a 40 anys.</label>
+					<input type="range" class="form-control" id="termini" placeholder="Triar mesos" name="termini" max="480" oninput="calcularAnys(this.value)">                                                  
+					<div id="mesosAnys"></div>
+			</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+
+
+				<br>
+				Data d'inici:<br>
+				<input type="date" name="inici" min="2017-11-07" max="2018-11-07">
+				<br>
+				Capital. No pot ser superior a 1 milió d'euros.<br>
+				<input type="number" name="capital">
+				<br>
+				Interessos. Pot ser un nombre real.<br>
+				<input type="number" name="interes">
+				<br>
+  				Termini en mesos. No pot ser superior a 40 anys.<br>
+  				<input type="range" name="termini" max="480" style="width:100%;" oninput="calcularAnys(this.value)">                                                   
+				<div id="mesosAnys"></div>
+				<br>
+				<input type="submit" value="Enviar">
+				<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+			</div>
+		</form>
+	</div>
+
+	<!-- Pagina web creada per en Toni Caballero Salas -->
+</body>
+</html>
