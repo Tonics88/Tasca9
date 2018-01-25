@@ -19,37 +19,19 @@
 			</div>
 			<div class="form-group">
 				<label for="capita">Capital. No pot ser superior a 1 milió d'euros.</label>
-				<input type="number" class="form-control" id="capita" placeholder="Quantitat desitjada" name="capital">
+				<input type="number" class="form-control" id="capita" placeholder="Quantitat desitjada" name="capital" oninput="calcularCapital(this.value)">
 			</div>
 			<div class="form-group">
 					<label for="interessos">Interessos. Pot ser un nombre real.</label>
-					<input type="number" class="form-control" id="interes" placeholder="Interessos" name="interes" step=".01">
+					<input type="number" class="form-control" id="interes" placeholder="Interessos" name="interes" step=".01" oninput="calcularInteres(this.value)">
 			</div>
 			<div class="form-group">
 					<label for="termini">Termini en mesos. No pot ser superior a 40 anys.</label>
-					<input type="range" class="form-control" id="termini" placeholder="Triar mesos" name="termini" max="480" oninput="calcularAnys(this.value)">                                                  
+					<input type="range" class="form-control" id="termini" placeholder="Triar mesos" name="termini" max="480" oninput="calcularTermini(this.value)">                                                  
 					<div id="mesosAnys"></div>
 			</div>
 			<button type="submit" class="btn btn-primary">Submit</button>
-		</form>
-
-
-				<br>
-				Data d'inici:<br>
-				<input type="date" name="inici" min="2017-11-07" max="2018-11-07">
-				<br>
-				Capital. No pot ser superior a 1 milió d'euros.<br>
-				<input type="number" name="capital">
-				<br>
-				Interessos. Pot ser un nombre real.<br>
-				<input type="number" name="interes">
-				<br>
-  				Termini en mesos. No pot ser superior a 40 anys.<br>
-  				<input type="range" name="termini" max="480" style="width:100%;" oninput="calcularAnys(this.value)">                                                   
-				<div id="mesosAnys"></div>
-				<br>
-				<input type="submit" value="Enviar">
-				<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+			<div id="resultat"></div>
 			</div>
 		</form>
 	</div>
