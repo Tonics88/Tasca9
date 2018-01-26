@@ -2,40 +2,67 @@
 <html>
 <head>
 	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tasca 1 - Calcular les quotes d'una hipoteca</title>
-    <!-- Llibreries de bootstrap afegides directament d'internet-->
-	<link rel="stylesheet" <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<title>Tasca 1 - Calcular les quotes d'una hipoteca</title>
+	<!-- Llibreries de bootstrap afegides directament d'internet-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<script src="js/calcularQuota.js"></script>
 </head>
 <body>
 	
 	<!-- Formulari -->
 	<div class="container">
-		<h3>Calcular les quotes d'una hipoteca</h3>
-		<form action="#">
-			<div class="form-group">
-				<label for="inici"></label>Data d'inici:</label>
-				<input type="month" class="form-control" id="inici" name="inici" min="2018-02" value="2018-02">
+		<br>
+		<!--<div class="card">
+			<img class="card-img" src="img/hipoteca.jpg" alt="Card image">
+			<div class="card-img-overlay">
+				
 			</div>
-			<div class="form-group">
-				<label for="capita">Capital. No pot ser superior a 1 milió d'euros.</label>
-				<input type="number" class="form-control" id="capita" placeholder="Quantitat desitjada" name="capital" oninput="calcularCapital(this.value)">
+		 </div>-->
+		<div class="card-deck">
+
+			<div class="card">
+				<div class="card-body">
+					<h2 class="card-title">Calcular les quotes d'una hipoteca</h2>
+					<p class="cardtext"></p><h5>PREDICCIÓ QUOTA MENSUAL</h5></p>
+					<h1><div id="resultat" style="text-align:center"></div></h1>
+				</div>
+				<img class="card-img-bottom" src="img/hipoteca1.jpg" alt="Card image cap">
 			</div>
-			<div class="form-group">
-					<label for="interessos">Interessos. Pot ser un nombre real.</label>
-					<input type="number" class="form-control" id="interes" placeholder="Interessos" name="interes" step=".01" oninput="calcularInteres(this.value)">
+
+			<div class="card">			
+				<div class="card-body">
+					<p class="card-text">
+						<form action="#">
+							<div class="form-group">
+								<label for="inici"></label>Data d'inici:</label>
+								<input type="month" class="form-control" id="inici" name="inici" min="2018-02" value="2018-02" oninput="calcularInici(this.value)">
+							</div>
+							<div class="form-group">
+								<label for="capita">Capital. No pot ser superior a 1 milió d'euros.</label>
+								<input type="number" class="form-control" id="capita" placeholder="Quantitat desitjada" name="capital" oninput="calcularCapital(this.value)">
+							</div>
+							<div class="form-group">
+								<label for="interessos">Interessos. Pot ser un nombre real.</label>
+								<input type="number" class="form-control" id="interes" placeholder="Interessos" name="interes" step=".01" oninput="calcularInteres(this.value)">
+							</div>
+							<div class="form-group">
+								<label for="termini">Termini en mesos. No pot ser superior a 40 anys.</label>
+								<input type="range" class="form-control" id="termini" placeholder="Triar mesos" name="termini" max="480" oninput="calcularTermini(this.value)">                                                  
+								<div id="mesosAnys"></div>
+							</div>
+							<button type="submit" class="btn btn-primary">Submit</button>
+						</form>	
+					</p>
+					<p class="card-text"><small class="text-muted">&nbsp&copy&nbspToni Caballero Salas</small></p>
+				</div>
 			</div>
-			<div class="form-group">
-					<label for="termini">Termini en mesos. No pot ser superior a 40 anys.</label>
-					<input type="range" class="form-control" id="termini" placeholder="Triar mesos" name="termini" max="480" oninput="calcularTermini(this.value)">                                                  
-					<div id="mesosAnys"></div>
-			</div>
-			<button type="submit" class="btn btn-primary">Submit</button>
-			<div id="resultat"></div>
-			</div>
-		</form>
+		
+		
+			
+		</div>
+
 	</div>
 
-	<!-- Pagina web creada per en Toni Caballero Salas -->
+<!-- Pagina web creada per en Toni Caballero Salas -->
 </body>
 </html>

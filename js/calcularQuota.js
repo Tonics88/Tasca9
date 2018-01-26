@@ -9,15 +9,18 @@ hipoteca={
 }
 
 function calcularInici(val) {
-
+    hipoteca.inici=val;
+    resultatCuota();
 }
 
 function calcularCapital(val) {
     hipoteca.capital=val;
+    resultatCuota();
 }
 
 function calcularInteres(val) {
     hipoteca.interes=val;
+    resultatCuota();
 }
 
 function calcularTermini(val) {
