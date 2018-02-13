@@ -14,8 +14,13 @@ function calcularInici(val) {
 }
 
 function calcularCapital(val) {
-    hipoteca.capital=val;
-    resultatCuota();
+    if (val<=1000000){
+        hipoteca.capital=val;
+        resultatCuota();
+    } else {
+        
+    }
+    
 }
 
 function calcularInteres(val) {
@@ -33,7 +38,7 @@ function calcularTermini(val) {
 }
 
 function resultatCuota (){
-    if (parseFloat(hipoteca.cuota())>0){
+    if (parseFloat(hipoteca.cuota())>0 && hipoteca.cuota()!="Infinity"){
         document.getElementById("resultat").innerHTML = " "+hipoteca.cuota()+" €";
     }
 }

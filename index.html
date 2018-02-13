@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-	<title>Tasca 1 - Calcular les quotes d'una hipoteca</title>
+	<title>Tasca 9 - Calcular les quotes d'una hipoteca</title>
 	<!-- Llibreries de bootstrap afegides directament d'internet-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<script src="js/calcularQuota.js"></script>
@@ -39,7 +39,7 @@
 							</div>
 							<div class="form-group">
 								<label for="capita">Capital. No pot ser superior a 1 milió d'euros.</label>
-								<input type="number" class="form-control" id="capita" placeholder="Quantitat desitjada" name="capital" oninput="calcularCapital(this.value)">
+								<input type="number" class="form-control" id="capital" placeholder="Quantitat desitjada" name="capital" min="0" max="1000000" oninput="calcularCapital(this.value)">
 							</div>
 							<div class="form-group">
 								<label for="interessos">Interessos. Pot ser un nombre real.</label>
@@ -50,8 +50,42 @@
 								<input type="range" class="form-control" id="termini" placeholder="Triar mesos" name="termini" max="480" oninput="calcularTermini(this.value)">                                                  
 								<div id="mesosAnys"></div>
 							</div>
+							<div class="form-group has-danger">
+								<label class="form-control-label" for="inputDanger1">Input with danger</label>
+								<input type="text" class="form-control form-control-danger" id="inputDanger1">
+								<div class="form-control-feedback">Sorry, that username's taken. Try another?</div>
+								<small class="form-text text-muted">Example help text that remains unchanged.</small>
+							  </div>
 							<button type="submit" class="btn btn-primary">Submit</button>
-						</form>	
+						</form>
+							
+						<form>
+							<div class="form-group row has-success">
+							  <label for="inputHorizontalSuccess" class="col-sm-2 col-form-label">Email</label>
+							  <div class="col-sm-10">
+								<input type="email" class="form-control form-control-success" id="inputHorizontalSuccess" placeholder="name@example.com">
+								<div class="form-control-feedback">Success! You've done it.</div>
+								<small class="form-text text-muted">Example help text that remains unchanged.</small>
+							  </div>
+							</div>
+							<div class="form-group row has-warning">
+							  <label for="inputHorizontalWarning" class="col-sm-2 col-form-label">Email</label>
+							  <div class="col-sm-10">
+								<input type="email" class="form-control form-control-warning" id="inputHorizontalWarning" placeholder="name@example.com">
+								<div class="form-control-feedback">Shucks, check the formatting of that and try again.</div>
+								<small class="form-text text-muted">Example help text that remains unchanged.</small>
+							  </div>
+							</div>
+							<div class="form-group row has-danger">
+							  <label for="inputHorizontalDnger" class="col-sm-2 col-form-label">Email</label>
+							  <div class="col-sm-10">
+								<input type="email" class="form-control form-control-danger" id="inputHorizontalDnger" placeholder="name@example.com">
+								<div class="form-control-feedback">Sorry, that username's taken. Try another?</div>
+								<small class="form-text text-muted">Example help text that remains unchanged.</small>
+							  </div>
+							</div>
+						  </form>
+						</div>
 					</p>
 					<p class="card-text"><small class="text-muted">&nbsp&copy&nbspToni Caballero Salas</small></p>
 				</div>
