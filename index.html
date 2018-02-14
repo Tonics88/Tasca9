@@ -24,7 +24,9 @@
 				<div class="card-body">
 					<h2 class="card-title">Calcular les quotes d'una hipoteca</h2>
 					<p class="cardtext"></p><h5>PREDICCIÓ QUOTA MENSUAL</h5></p>
-					<h1><div id="resultat" style="text-align:center"></div></h1>
+					<h1><div id="resultat" style="text-align:center">&nbsp</div></h1>
+					<p class="cardtext"></p><h5>PREDICCIÓ DATA FI HIPOTECA</h5></p>
+					<h1><div id="final" style="text-align:center">&nbsp</div></h1>
 				</div>
 				<img class="card-img-bottom" src="img/hipoteca1.jpg" alt="Card image cap">
 			</div>
@@ -35,64 +37,35 @@
 						<form action="#">
 							<div class="form-group">
 								<label for="inici"></label>Data d'inici:</label>
-								<input type="month" class="form-control" id="inici" name="inici" min="2018-02" value="2018-02" oninput="calcularInici(this.value)">
+								<input type="month" class="form-control" id="inici" name="inici" min="2018-02" value="" oninput="calcularInici(this.value)">
+								<small class="form-text text-muted">Comença el primer dia de mes que sigui posible.</small>
 							</div>
 							<div class="form-group">
-								<label for="capita">Capital. No pot ser superior a 1 milió d'euros.</label>
+								<label for="capita">Capital</label>
 								<input type="number" class="form-control" id="capital" placeholder="Quantitat desitjada" name="capital" min="0" max="1000000" oninput="calcularCapital(this.value)">
+								<small class="form-text text-muted">No pot ser superior a 1 milió d'euros.</small>
 							</div>
 							<div class="form-group">
-								<label for="interessos">Interessos. Pot ser un nombre real.</label>
+								<label for="interessos">Interessos</label>
 								<input type="number" class="form-control" id="interes" placeholder="Interessos" name="interes" step=".01" oninput="calcularInteres(this.value)">
+								<small class="form-text text-muted">Pot ser un nombre real.</small>
 							</div>
 							<div class="form-group">
-								<label for="termini">Termini en mesos. No pot ser superior a 40 anys.</label>
+								<label for="termini">Termini en mesos</label>
 								<input type="range" class="form-control" id="termini" placeholder="Triar mesos" name="termini" max="480" oninput="calcularTermini(this.value)">                                                  
+								<small class="form-text text-muted">No pot ser superior a 40 anys.</small>
 								<div id="mesosAnys"></div>
 							</div>
-							<div class="form-group has-danger">
-								<label class="form-control-label" for="inputDanger1">Input with danger</label>
-								<input type="text" class="form-control form-control-danger" id="inputDanger1">
-								<div class="form-control-feedback">Sorry, that username's taken. Try another?</div>
-								<small class="form-text text-muted">Example help text that remains unchanged.</small>
-							  </div>
 							<button type="submit" class="btn btn-primary">Submit</button>
 						</form>
-							
-						<form>
-							<div class="form-group row has-success">
-							  <label for="inputHorizontalSuccess" class="col-sm-2 col-form-label">Email</label>
-							  <div class="col-sm-10">
-								<input type="email" class="form-control form-control-success" id="inputHorizontalSuccess" placeholder="name@example.com">
-								<div class="form-control-feedback">Success! You've done it.</div>
-								<small class="form-text text-muted">Example help text that remains unchanged.</small>
-							  </div>
-							</div>
-							<div class="form-group row has-warning">
-							  <label for="inputHorizontalWarning" class="col-sm-2 col-form-label">Email</label>
-							  <div class="col-sm-10">
-								<input type="email" class="form-control form-control-warning" id="inputHorizontalWarning" placeholder="name@example.com">
-								<div class="form-control-feedback">Shucks, check the formatting of that and try again.</div>
-								<small class="form-text text-muted">Example help text that remains unchanged.</small>
-							  </div>
-							</div>
-							<div class="form-group row has-danger">
-							  <label for="inputHorizontalDnger" class="col-sm-2 col-form-label">Email</label>
-							  <div class="col-sm-10">
-								<input type="email" class="form-control form-control-danger" id="inputHorizontalDnger" placeholder="name@example.com">
-								<div class="form-control-feedback">Sorry, that username's taken. Try another?</div>
-								<small class="form-text text-muted">Example help text that remains unchanged.</small>
-							  </div>
-							</div>
-						  </form>
 						</div>
 					</p>
+
+					
+
 					<p class="card-text"><small class="text-muted">&nbsp&copy&nbspToni Caballero Salas</small></p>
 				</div>
-			</div>
-		
-		
-			
+			</div>	
 		</div>
 
 	</div>
