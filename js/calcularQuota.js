@@ -70,5 +70,5 @@ function resultatCuota (){
     if (parseFloat(hipoteca.cuota())>0 && hipoteca.cuota()!="Infinity"){
         document.getElementById("resultat").innerHTML = " "+hipoteca.cuota()+" €";
     }
-    document.getElementById("final").innerHTML = " Mes "+(hipoteca.mes+parseInt(hipoteca.termini))%12+" del "+(hipoteca.any+parseInt(hipoteca.termini/12));
+    document.getElementById("final").innerHTML = " Mes "+(parseInt(hipoteca.termini)%12+hipoteca.mes)+" del "+(hipoteca.any+parseInt(hipoteca.termini/12));
 }
