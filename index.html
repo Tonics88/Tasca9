@@ -12,19 +12,20 @@
 	<!-- Formulari -->
 	<div class="container">
 		<br>
+		<!-- Dividim la pantalla en dos div, una mostrarà el resultat en temps real i l'altre per entrar les dades -->
 		<div class="card-deck">
-
+			<!-- Div on mostram els resultats en temps real -->
 			<div class="card">
 				<div class="card-body">
 					<h2 class="card-title">Calcular les quotes d'una hipoteca</h2>
-					<p class="cardtext"></p><h5>PREDICCIÓ QUOTA MENSUAL</h5></p>
+					<p class="cardtext"><h5>PREDICCIÓ QUOTA MENSUAL</h5></p>
 					<h1><div id="resultat" style="text-align:center">&nbsp</div></h1>
-					<p class="cardtext"></p><h5>PREDICCIÓ DATA DARRERA QUOTA</h5></p>
+					<p class="cardtext"><h5>PREDICCIÓ DATA DARRERA QUOTA</h5></p>
 					<h1><div id="final" style="text-align:center">&nbsp</div></h1>
 				</div>
 				<img class="card-img-bottom" src="img/hipoteca1.jpg" alt="Card image cap">
 			</div>
-
+			<!-- Div on introduïm totes les dades -->
 			<div class="card">			
 				<div class="card-body">
 					<p class="card-text">
@@ -48,11 +49,11 @@
 								<label for="termini">Termini en mesos</label>
 								<input type="range" class="form-control" id="termini" placeholder="Triar mesos" name="termini" min="1" max="480" oninput="calcularTermini(this.value)">                                                  
 								<small class="form-text text-muted">No pot ser superior a 40 anys.</small>
-								<div id="mesosAnys"></div>
+								<div id="mesosAnys">&nbsp</div>
 							</div>	
 						</form>
-						</div>
 					</p>
+					<br><br>
 					<!-- Pagina web creada per en Toni Caballero Salas -->
 					<p class="card-text"><small class="text-muted">&nbsp&copy&nbspToni Caballero Salas</small></p>
 				</div>
